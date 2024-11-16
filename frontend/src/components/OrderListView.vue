@@ -27,7 +27,7 @@
                 { text: "menuId", value: "menuId" },
                 { text: "menuName", value: "menuName" },
                 { text: "orderId", value: "orderId" },
-                { text: "orderStatus", value: "orderStatus" },
+                { text: "menuStatus", value: "menuStatus" },
                 { text: "orderTime", value: "orderTime" },
                 { text: "size", value: "size" },
             ],

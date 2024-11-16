@@ -27,8 +27,6 @@ public class Notification {
 
     private String orderId;
 
-    private String orderStatus;
-
     public static NotificationRepository repository() {
         NotificationRepository notificationRepository = NotificationApplication.applicationContext.getBean(
             NotificationRepository.class

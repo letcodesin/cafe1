@@ -21,7 +21,6 @@
             <String label="MenuId" v-model="value.menuId" :editMode="editMode" :inputUI="''"/>
             <String label="MenuName" v-model="value.menuName" :editMode="editMode" :inputUI="''"/>
             <String label="OrderId" v-model="value.orderId" :editMode="editMode" :inputUI="''"/>
-            <String label="OrderStatus" v-model="value.orderStatus" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
         <v-card-actions style="background-color: white;">

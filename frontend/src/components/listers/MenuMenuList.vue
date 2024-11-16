@@ -57,7 +57,7 @@
                             [ MenuId :  {{data.menuId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MenuName :  {{data.menuName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ OrderStatus :  {{data.orderStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MenuStatus :  {{data.menuStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Recipe :  {{data.recipe }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
@@ -131,7 +131,7 @@
                 'menuId': '',
                 'menuName': '',
                 'orderId': '',
-                'orderStatus': '',
+                'menuStatus': '',
                 'recipe': '',
             }
         },

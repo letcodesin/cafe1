@@ -109,7 +109,6 @@
                 'menuId': '',
                 'menuName': '',
                 'orderId': '',
-                'orderStatus': '',
             }
         },
         methods:{

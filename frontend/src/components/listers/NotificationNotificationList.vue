@@ -46,7 +46,6 @@
                             
                             
                             
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -56,7 +55,6 @@
                             [ MenuId :  {{data.menuId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MenuName :  {{data.menuName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ OrderStatus :  {{data.orderStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -129,7 +127,6 @@
                 'menuId': '',
                 'menuName': '',
                 'orderId': '',
-                'orderStatus': '',
             }
         },
         methods: {

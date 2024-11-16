@@ -24,10 +24,10 @@
                                 OrderId :  {{item.orderId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                OrderStatus :  {{item.orderStatus }}
+                                OrderTime :  {{item.orderTime }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                OrderTime :  {{item.orderTime }}
+                                MenuId :  {{item.menuId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Size :  {{item.size }}
