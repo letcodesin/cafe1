@@ -69,12 +69,31 @@ public class Menu {
 
         menu.setUserId(orderPlaced.getUserId());
         menu.setUserName(orderPlaced.getUserName());
-        menu.setOrderId(orderPlaced.getOrderId());
-        menu.setOrderStatus(orderPlaced.getOrderStatus());        
+        menu.setOrderId(orderPlaced.getOrderId());        
         menu.setMenuId(orderPlaced.getMenuId());
+        //주문시간 체크
+        // Date -> LocalDateTime 변환
+        LocalDateTime orderTime = orderPlaced.getOrderTime()
+                                            .toInstant()
+                                            .atZone(ZoneId.systemDefault())
+                                            .toLocalDateTime();
 
-        MenuMaked menuMaked = new MenuMaked(menu);
-        menuMaked.publishAfterCommit();
+        // 현재 시간
+        LocalDateTime now = LocalDateTime.now();
+        if(menu.getMenuStatus(0) && now.isBefore(orderTime.plusSeconds(45))){
+            menu.setMenuStatus("제조중");
+        }
+        else if (menu.getMenuStatus().equals("제조중") &&orderTime.plusSeconds(45).isBefore(now)) {
+            menu.setMenuStatus("제조완료");
+        } 
+        /*
+        else if(menu.getMenuStatus().equals("제조중") && now.isBefore(orderPlaced.getOrderTime().plusSeconds(45))){
+            menu.setMenuStatus(0);
+            MenuMaked menuMaked = new MenuMaked(menu);
+            menuMaked.publishAfterCommit();
+        }
+        */
+
         
 
         /** Example 2:  finding and process
