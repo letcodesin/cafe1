@@ -12,6 +12,13 @@ import lombok.*;
 public class CouponPublished extends AbstractEvent {
 
     private Long id;
+    private String userId;
+    private String userName;
+    private String menuId;
+    private String menuName;
+    private String orderId;
+    private String orderStatus;
+    private String recipe;
 
     public CouponPublished(Menu aggregate) {
         super(aggregate);

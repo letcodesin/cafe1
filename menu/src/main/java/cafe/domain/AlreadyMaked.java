@@ -12,6 +12,13 @@ import lombok.*;
 public class AlreadyMaked extends AbstractEvent {
 
     private Long id;
+    private String userId;
+    private String userName;
+    private String menuId;
+    private String menuName;
+    private String orderId;
+    private String orderStatus;
+    private String recipe;
 
     public AlreadyMaked(Menu aggregate) {
         super(aggregate);
