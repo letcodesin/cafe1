@@ -72,6 +72,7 @@
                     { text: "orderId", value: "orderId" },
                     { text: "orderStatus", value: "orderStatus" },
                     { text: "orderTime", value: "orderTime" },
+                    { text: "menuId", value: "menuId" },
                     { text: "size", value: "size" },
                 ],
             order : [],
@@ -95,6 +96,7 @@
                 'orderId': '',
                 'orderStatus': '',
                 'orderTime': '2024-11-16',
+                'menuId': '',
                 'size': '',
             }
         },

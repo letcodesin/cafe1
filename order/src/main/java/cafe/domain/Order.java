@@ -29,6 +29,8 @@ public class Order {
 
     private Date orderTime;
 
+    private String menuId;
+
     private String size;
 
     @PostPersist

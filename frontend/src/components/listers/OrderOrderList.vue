@@ -47,6 +47,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -56,6 +57,7 @@
                             [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderStatus :  {{data.orderStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderTime :  {{data.orderTime }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ MenuId :  {{data.menuId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Size :  {{data.size }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
@@ -129,6 +131,7 @@
                 'orderId': '',
                 'orderStatus': '',
                 'orderTime': '2024-11-16',
+                'menuId': '',
                 'size': '',
             }
         },

@@ -21,6 +21,9 @@
                 <Date label="OrderTime" v-model="item.orderTime" :editMode="editMode" @change="change" />
             </div>
             <div>
+                <String label="MenuId" v-model="item.menuId" :editMode="editMode" @change="change" />
+            </div>
+            <div>
                 <String label="Size" v-model="item.size" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>

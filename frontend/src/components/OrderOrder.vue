@@ -21,6 +21,7 @@
             <String label="OrderId" v-model="value.orderId" :editMode="editMode" :inputUI="''"/>
             <String label="OrderStatus" v-model="value.orderStatus" :editMode="editMode" :inputUI="''"/>
             <Date label="OrderTime" v-model="value.orderTime" :editMode="editMode" :inputUI="''"/>
+            <String label="MenuId" v-model="value.menuId" :editMode="editMode" :inputUI="''"/>
             <String label="Size" v-model="value.size" :editMode="editMode" :inputUI="''"/>
         </v-card-text>
 
