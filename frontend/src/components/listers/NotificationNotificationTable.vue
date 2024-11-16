@@ -72,7 +72,6 @@
                     { text: "menuId", value: "menuId" },
                     { text: "menuName", value: "menuName" },
                     { text: "orderId", value: "orderId" },
-                    { text: "orderStatus", value: "orderStatus" },
                 ],
             notification : [],
             newValue: {},
@@ -95,7 +94,6 @@
                 'menuId': '',
                 'menuName': '',
                 'orderId': '',
-                'orderStatus': '',
             }
         },
         methods: {

@@ -22,7 +22,7 @@
                 <String label="OrderId" v-model="item.orderId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="OrderStatus" v-model="item.orderStatus" :editMode="editMode" @change="change" />
+                <String label="MenuStatus" v-model="item.menuStatus" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Date label="OrderTime" v-model="item.orderTime" :editMode="editMode" @change="change" />

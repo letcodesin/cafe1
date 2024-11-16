@@ -44,7 +44,7 @@ mvn spring-boot:run
 ```
 - notification
 ```
- http :8088/notifications id="id" userId="userId" userName="userName" menuId="menuId" menuName="menuName" orderId="orderId" orderStatus="orderStatus" 
+ http :8088/notifications id="id" userId="userId" userName="userName" menuId="menuId" menuName="menuName" orderId="orderId" 
 ```
 - orderlist
 ```
