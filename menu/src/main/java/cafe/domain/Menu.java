@@ -10,6 +10,8 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
+import java.time.ZoneId;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Menu_table")
@@ -51,11 +53,9 @@ public class Menu {
     }
 
     public static MenuRepository repository() {
-        /*
         MenuRepository menuRepository = MenuApplication.applicationContext.getBean(
             MenuRepository.class
         );
-        */
         return menuRepository;
     }
 
@@ -80,7 +80,7 @@ public class Menu {
 
         // 현재 시간
         LocalDateTime now = LocalDateTime.now();
-        if(menu.getMenuStatus(0) && now.isBefore(orderTime.plusSeconds(45))){
+        if(menu.getMenuStatus().equals("0") && now.isBefore(orderTime.plusSeconds(45))){
             menu.setMenuStatus("제조중");
         }
         else if (menu.getMenuStatus().equals("제조중") &&orderTime.plusSeconds(45).isBefore(now)) {
