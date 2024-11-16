@@ -47,7 +47,6 @@
                             
                             
                             
-                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -55,7 +54,6 @@
                             [ UserId :  {{data.userId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ UserName :  {{data.userName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ OrderStatus :  {{data.orderStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderTime :  {{data.orderTime }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MenuId :  {{data.menuId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Size :  {{data.size }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -129,7 +127,6 @@
                 'userId': '',
                 'userName': '',
                 'orderId': '',
-                'orderStatus': '',
                 'orderTime': '2024-11-16',
                 'menuId': '',
                 'size': '',

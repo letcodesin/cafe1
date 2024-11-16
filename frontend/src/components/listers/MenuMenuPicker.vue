@@ -30,7 +30,7 @@
                                 OrderId :  {{item.orderId }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                OrderStatus :  {{item.orderStatus }}
+                                MenuStatus :  {{item.menuStatus }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 Recipe :  {{item.recipe }}

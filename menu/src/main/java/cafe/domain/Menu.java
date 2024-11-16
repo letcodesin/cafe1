@@ -31,7 +31,7 @@ public class Menu {
 
     private String orderId;
 
-    private String orderStatus;
+    private String menuStatus;
 
     private String recipe;
 

@@ -36,11 +36,11 @@ mvn spring-boot:run
 ## Test by API
 - order
 ```
- http :8088/orders id="id" userId="userId" userName="userName" orderId="orderId" orderStatus="orderStatus" orderTime="orderTime" menuId="menuId" size="size" 
+ http :8088/orders id="id" userId="userId" userName="userName" orderId="orderId" orderTime="orderTime" menuId="menuId" size="size" 
 ```
 - menu
 ```
- http :8088/menus id="id" userId="userId" userName="userName" menuId="menuId" menuName="menuName" orderId="orderId" orderStatus="orderStatus" recipe="recipe" 
+ http :8088/menus id="id" userId="userId" userName="userName" menuId="menuId" menuName="menuName" orderId="orderId" menuStatus="menuStatus" recipe="recipe" 
 ```
 - notification
 ```

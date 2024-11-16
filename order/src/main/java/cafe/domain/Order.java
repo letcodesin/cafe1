@@ -25,8 +25,6 @@ public class Order {
 
     private String orderId;
 
-    private String orderStatus;
-
     private Date orderTime;
 
     private String menuId;
