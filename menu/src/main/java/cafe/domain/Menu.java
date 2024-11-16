@@ -71,6 +71,7 @@ public class Menu {
         menu.setUserName(orderPlaced.getUserName());
         menu.setOrderId(orderPlaced.getOrderId());
         menu.setOrderStatus(orderPlaced.getOrderStatus());        
+        menu.setMenuId(orderPlaced.getMenuId());
 
         MenuMaked menuMaked = new MenuMaked(menu);
         menuMaked.publishAfterCommit();
