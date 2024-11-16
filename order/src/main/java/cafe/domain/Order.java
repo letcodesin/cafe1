@@ -8,6 +8,8 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
+import java.time.ZoneId;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Order_table")
@@ -30,6 +32,19 @@ public class Order {
     private String menuId;
 
     private String size;
+
+    //PrePersist Method to set default orderTime
+    @PrePersist
+    public void setDefaultOrderTime() {
+        if (orderTime == null) {
+            // KST 시간으로 설정
+            ZoneId kstZone = ZoneId.of("Asia/Seoul");
+            LocalDateTime nowKST = LocalDateTime.now(kstZone);
+
+            // LocalDateTime -> Date 변환
+            orderTime = Date.from(nowKST.atZone(kstZone).toInstant());
+        }
+    }
 
     @PostPersist
     public void onPostPersist() {

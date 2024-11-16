@@ -64,6 +64,7 @@ public class Menu {
         //implement business logic here:
 
         // Example 1:  new item 
+        /*
         Menu menu = new Menu();
         repository().save(menu);
 
@@ -71,43 +72,44 @@ public class Menu {
         menu.setUserName(orderPlaced.getUserName());
         menu.setOrderId(orderPlaced.getOrderId());        
         menu.setMenuId(orderPlaced.getMenuId());
-        //주문시간 체크
-        // Date -> LocalDateTime 변환
-        LocalDateTime orderTime = orderPlaced.getOrderTime()
-                                            .toInstant()
-                                            .atZone(ZoneId.systemDefault())
-                                            .toLocalDateTime();
-
-        // 현재 시간
-        LocalDateTime now = LocalDateTime.now();
-        if(menu.getMenuStatus().equals("0") && now.isBefore(orderTime.plusSeconds(45))){
-            menu.setMenuStatus("제조중");
-        }
-        else if (menu.getMenuStatus().equals("제조중") &&orderTime.plusSeconds(45).isBefore(now)) {
-            menu.setMenuStatus("제조완료");
-        } 
-        /*
-        else if(menu.getMenuStatus().equals("제조중") && now.isBefore(orderPlaced.getOrderTime().plusSeconds(45))){
-            menu.setMenuStatus(0);
-            MenuMaked menuMaked = new MenuMaked(menu);
-            menuMaked.publishAfterCommit();
-        }
         */
 
-        
+        // Example 2:  finding and process
+        repository().findById(Long.valueOf(orderPlaced.getMenuId())).ifPresent(menu->{
+            ZoneId kstZone = ZoneId.of("Asia/Seoul");
 
-        /** Example 2:  finding and process
-        
-        repository().findById(orderPlaced.get???()).ifPresent(menu->{
-            
-            menu // do something
+            // 주문 시간 KST로 변환
+            LocalDateTime orderTime = orderPlaced.getOrderTime()
+                                                    .toInstant()
+                                                    .atZone(kstZone)
+                                                    .toLocalDateTime();
+
+            // 현재 시간 KST로 변환
+            LocalDateTime now = LocalDateTime.now(kstZone);
+
+            // 상태 변경 로직
+            if (menu.getMenuStatus().equals("0") && now.isBefore(orderTime.plusSeconds(10))) {
+                menu.setMenuStatus("제조중");
+            } else if (menu.getMenuStatus().equals("제조중") && now.isAfter(orderTime.plusSeconds(10))) {
+                menu.setMenuStatus("제조완료");
+            }
+
+            /*
+            else if(menu.getMenuStatus().equals("제조중") && now.isBefore(orderPlaced.getOrderTime().plusSeconds(45))){
+                menu.setMenuStatus(0);
+                MenuMaked menuMaked = new MenuMaked(menu);
+                menuMaked.publishAfterCommit();
+            }
+            */
+
             repository().save(menu);
 
-            MenuMaked menuMaked = new MenuMaked(menu);
-            menuMaked.publishAfterCommit();
-
+            if (menu.getMenuStatus().equals("제조완료")) {
+                MenuMaked menuMaked = new MenuMaked(menu);
+                menuMaked.publishAfterCommit();
+            }
          });
-        */
+        
 
     }
 
