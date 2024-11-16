@@ -51,9 +51,11 @@ public class Menu {
     }
 
     public static MenuRepository repository() {
+        /*
         MenuRepository menuRepository = MenuApplication.applicationContext.getBean(
             MenuRepository.class
         );
+        */
         return menuRepository;
     }
 
@@ -61,13 +63,18 @@ public class Menu {
     public static void makeMenu(OrderPlaced orderPlaced) {
         //implement business logic here:
 
-        /** Example 1:  new item 
+        // Example 1:  new item 
         Menu menu = new Menu();
         repository().save(menu);
 
+        menu.setUserId(orderPlaced.getUserId());
+        menu.setUserName(orderPlaced.getUserName());
+        menu.setOrderId(orderPlaced.getOrderId());
+        menu.setOrderStatus(orderPlaced.getOrderStatus());        
+
         MenuMaked menuMaked = new MenuMaked(menu);
         menuMaked.publishAfterCommit();
-        */
+        
 
         /** Example 2:  finding and process
         
