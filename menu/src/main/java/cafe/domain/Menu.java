@@ -68,10 +68,7 @@ public class Menu {
         Menu menu = new Menu();
         repository().save(menu);
 
-        menu.setUserId(orderPlaced.getUserId());
-        menu.setUserName(orderPlaced.getUserName());
-        menu.setOrderId(orderPlaced.getOrderId());        
-        menu.setMenuId(orderPlaced.getMenuId());
+
         */
 
         // Example 2:  finding and process
@@ -104,10 +101,7 @@ public class Menu {
 
             repository().save(menu);
 
-            if (menu.getMenuStatus().equals("제조완료")) {
-                MenuMaked menuMaked = new MenuMaked(menu);
-                menuMaked.publishAfterCommit();
-            }
+
          });
         
 

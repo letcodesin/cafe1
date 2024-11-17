@@ -70,6 +70,7 @@
                     { text: "userId", value: "userId" },
                     { text: "userName", value: "userName" },
                     { text: "orderId", value: "orderId" },
+                    { text: "orderStatus", value: "orderStatus" },
                     { text: "orderTime", value: "orderTime" },
                     { text: "menuId", value: "menuId" },
                     { text: "size", value: "size" },
@@ -93,7 +94,8 @@
                 'userId': '',
                 'userName': '',
                 'orderId': '',
-                'orderTime': '2024-11-16',
+                'orderStatus': '',
+                'orderTime': '2024-11-17',
                 'menuId': '',
                 'size': '',
             }

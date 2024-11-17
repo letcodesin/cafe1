@@ -19,6 +19,7 @@
             <String label="UserId" v-model="value.userId" :editMode="editMode" :inputUI="''"/>
             <String label="UserName" v-model="value.userName" :editMode="editMode" :inputUI="''"/>
             <String label="OrderId" v-model="value.orderId" :editMode="editMode" :inputUI="''"/>
+            <String label="OrderStatus" v-model="value.orderStatus" :editMode="editMode" :inputUI="''"/>
             <Date label="OrderTime" v-model="value.orderTime" :editMode="editMode" :inputUI="''"/>
             <String label="MenuId" v-model="value.menuId" :editMode="editMode" :inputUI="''"/>
             <String label="Size" v-model="value.size" :editMode="editMode" :inputUI="''"/>
