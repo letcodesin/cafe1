@@ -33,6 +33,8 @@ public class Menu {
 
     private String menuStatus;
 
+    private String completeStatus;
+
     private String recipe;
 
     @PostPersist

@@ -48,6 +48,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -58,6 +59,7 @@
                             [ MenuName :  {{data.menuName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ OrderId :  {{data.orderId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ MenuStatus :  {{data.menuStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ CompleteStatus :  {{data.completeStatus }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Recipe :  {{data.recipe }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
@@ -132,6 +134,7 @@
                 'menuName': '',
                 'orderId': '',
                 'menuStatus': '',
+                'completeStatus': '',
                 'recipe': '',
             }
         },

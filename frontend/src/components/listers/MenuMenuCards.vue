@@ -110,6 +110,7 @@
                 'menuName': '',
                 'orderId': '',
                 'menuStatus': '',
+                'completeStatus': '',
                 'recipe': '',
             }
         },

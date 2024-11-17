@@ -19,6 +19,7 @@ public class MenuMaked extends AbstractEvent {
     private String menuStatus;
     private String orderId;
     private String orderStatus;
+    private String completeStatus;
     private String recipe;
 
     public MenuMaked(Menu aggregate) {

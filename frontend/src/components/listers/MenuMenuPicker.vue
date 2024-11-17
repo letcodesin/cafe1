@@ -33,6 +33,9 @@
                                 MenuStatus :  {{item.menuStatus }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
+                                CompleteStatus :  {{item.completeStatus }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
                                 Recipe :  {{item.recipe }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
@@ -86,6 +89,8 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
+                    
+                    
                     
                     
                     

@@ -25,7 +25,13 @@
                 <String label="MenuStatus" v-model="item.menuStatus" :editMode="editMode" @change="change" />
             </div>
             <div>
+                <String label="CompleteStatus" v-model="item.completeStatus" :editMode="editMode" @change="change" />
+            </div>
+            <div>
                 <Date label="OrderTime" v-model="item.orderTime" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <String label="OrderStatus" v-model="item.orderStatus" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <String label="Size" v-model="item.size" :editMode="editMode" @change="change" />

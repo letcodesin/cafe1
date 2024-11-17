@@ -40,7 +40,7 @@ mvn spring-boot:run
 ```
 - menu
 ```
- http :8088/menus id="id" userId="userId" userName="userName" menuId="menuId" menuName="menuName" orderId="orderId" menuStatus="menuStatus" recipe="recipe" 
+ http :8088/menus id="id" userId="userId" userName="userName" menuId="menuId" menuName="menuName" orderId="orderId" menuStatus="menuStatus" completeStatus="completeStatus" recipe="recipe" 
 ```
 - notification
 ```

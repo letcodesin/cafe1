@@ -73,6 +73,7 @@
                     { text: "menuName", value: "menuName" },
                     { text: "orderId", value: "orderId" },
                     { text: "menuStatus", value: "menuStatus" },
+                    { text: "completeStatus", value: "completeStatus" },
                     { text: "recipe", value: "recipe" },
                 ],
             menu : [],
@@ -97,6 +98,7 @@
                 'menuName': '',
                 'orderId': '',
                 'menuStatus': '',
+                'completeStatus': '',
                 'recipe': '',
             }
         },

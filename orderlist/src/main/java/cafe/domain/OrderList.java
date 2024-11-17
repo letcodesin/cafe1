@@ -22,6 +22,8 @@ public class OrderList {
     private String menuName;
     private String orderId;
     private String menuStatus;
+    private String completeStatus;
     private Date orderTime;
+    private String orderStatus;
     private String size;
 }

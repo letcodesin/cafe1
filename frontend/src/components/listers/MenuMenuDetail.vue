@@ -24,6 +24,9 @@
                 <String label="MenuStatus" v-model="item.menuStatus" :editMode="editMode" @change="change" />
             </div>
             <div>
+                <String label="CompleteStatus" v-model="item.completeStatus" :editMode="editMode" @change="change" />
+            </div>
+            <div>
                 <String label="Recipe" v-model="item.recipe" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
