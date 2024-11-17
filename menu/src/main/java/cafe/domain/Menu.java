@@ -67,8 +67,6 @@ public class Menu {
         /*
         Menu menu = new Menu();
         repository().save(menu);
-
-
         */
 
         // Example 2:  finding and process
@@ -101,6 +99,8 @@ public class Menu {
 
             repository().save(menu);
 
+            MenuMaked menuMaked = new MenuMaked(menu);
+            menuMaked.publishAfterCommit();
 
          });
         
