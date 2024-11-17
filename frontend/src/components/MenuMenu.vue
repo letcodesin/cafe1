@@ -41,7 +41,7 @@
                     text
                     @click="save"
                 >
-                저장
+                    MenuComplete
                 </v-btn>
                 <v-btn
                     color="primary"
